@@ -13,6 +13,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y  mysql-server
 RUN service mysql start && mysqladmin -u root password 'OLD78Young56'
 
 RUN service mysql stop 
+
+RUN apt-get -y  install libmysqlclient-dev
 RUN curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 RUN curl -sSL https://get.rvm.io | bash -s stable --ruby=2.2.1
 ENV PATH /usr/local/rvm/rubies/ruby-2.2.1/bin:$PATH
