@@ -1,0 +1,13 @@
+default:
+ email_delivery:
+   delivery_method: :smtp
+   smtp_settings:
+    enable_starttls_auto: true
+    address: "1.1.1.1"
+    port: 587
+    domain: "xxx"
+    authentication: :plain
+    user_name: "UUUU"
+    password: "PPPP"
+
+ 

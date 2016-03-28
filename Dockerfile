@@ -60,6 +60,8 @@ RUN bundle install --without development test postgresql
  RUN service  mysql start && RAILS_ENV=production REDMINE_LANG=ru  rake redmine:load_default_data
 #o#RUN useradd  redmine
 # RUN chown -hR redmine:redmine /opt/redmine/current
+
+COPY config.yml /opt/redmine/current/config/configuration.yml
 EXPOSE 8080
 
 CMD /bin/bash -l -c 'service mysql start &&  thin -p 8080 -c /opt/redmine/current/ -e production   start'
