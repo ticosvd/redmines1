@@ -1,3 +1,4 @@
 http://seyferseed.ru/ru/ruby/ustanovka-redmine-2-6-na-debian-7-wheezy-apache-passenger.html#sthash.QDDSh6g6.dpbs
 docker run -p 127.0.0.1:8080:8080 -d  --name redmine1 -t redmine
 docker build -t redmine  .
+git push -u origin master
