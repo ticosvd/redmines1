@@ -1,0 +1,11 @@
+server {
+  listen 80;
+  
+   location / {
+            try_files $uri @cluster;
+      }
+  locations @cluster {
+     proxy_pass http://127.0.0.1:8080;
+    }
+} 
+
